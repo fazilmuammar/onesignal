@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="editarticleview"
+            type="com.example.ekreasi.viewmodel.EditArticleViewModel"/>
+
+        <variable
+            name="presenter"
+            type="com.example.ekreasi.view.EditArticleView"/>
+
+    </data>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <android.support.v7.widget.Toolbar
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:layout_collapseMode="pin">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/my_toolbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:text="Edit Article"
+                    android:textColor="#fff"
+                    style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse"
+                    />
+
+
+
+                <ImageButton
+                    android:id="@+id/back"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/back"
+                    style="@style/Widget.AppCompat.ActionButton" />
+
+
+            </FrameLayout>
+        </android.support.v7.widget.Toolbar>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:padding="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:onClick="@{(v)->presenter.DisplayImage()}"
+                        android:id="@+id/gambar"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:clickable="true"
+                        android:src="@drawable/camera"
+                        android:layout_margin="10dp"
+                        android:layout_gravity="center" />
+
+                    <TextView
+                        android:id="@+id/input1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Email"/>
+
+                    <com.andreabaccega.widget.FormEditText
+                        android:textSize="16dp"
+                        android:id="@+id/edit_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Email"
+                        android:inputType="textEmailAddress"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="Nama"/>
+                    <EditText
+                        android:id="@+id/edit_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16dp"
+                        android:textStyle="normal"
+                        android:maxLength="40"
+                        android:hint="Judul tulisan (maks 40 karakter)"/>
+
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="Tanggal"/>
+
+
+                    <EditText
+                        android:focusable="false"
+                        android:clickable="true"
+                        android:id="@+id/tanggal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16dp"
+                        android:textStyle="normal"
+                        android:maxLength="40"
+                        android:hint="Tanggal"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="Category"/>
+
+                    <Spinner
+                        android:id="@+id/spin_category"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"/>
+
+
+                    <Spinner
+                        android:id="@+id/spin_category_id"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:visibility="visible"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="Phone"/>
+
+
+                    <EditText
+                        android:inputType="phone"
+                        android:id="@+id/phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16dp"
+                        android:textStyle="normal"
+                        android:maxLength="12"
+                        android:hint="Phone"/>
+
+
+                    <TextView
+                        android:id="@+id/input3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Konten"/>
+
+                    <EditText
+                        android:id="@+id/edit_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16dp"
+                        android:textStyle="normal"
+                        android:gravity="top|left"
+                        android:inputType="textMultiLine"
+                        android:maxLines="20"
+                        android:minLines="10"
+                        android:hint="Tulis disini"/>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/layout"
+                        android:orientation="vertical">
+
+
+                        <ImageView
+                            android:id="@+id/gambarttd"
+                            android:layout_width="match_parent"
+                            android:layout_height="300dp"
+                            android:layout_margin="20dp"
+                            android:background="@drawable/edittextdesign"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp" />
+
+                        <Button
+                            android:id="@+id/getku"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="20dp"
+                            android:text="get signature" />
+
+
+                    </LinearLayout>
+
+                    <Button
+                        android:onClick="@{(v)->presenter.EditData()}"
+                        android:textStyle="bold"
+                        android:textColor="#fff"
+                        android:text="Save Article"
+                        android:layout_margin="10dp"
+                        android:padding="10dp"
+                        android:id="@+id/editku"
+                        android:background="@color/colorPrimary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+            </ScrollView>
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</layout>

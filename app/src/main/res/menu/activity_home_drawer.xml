@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_camera"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_library_books_black_24dp"
+            android:title="Article" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/ic_account_box_black_24dp"
+            android:title="Profile" />
+
+        <item
+            android:id="@+id/nav_web"
+            android:icon="@drawable/ic_cloud_queue_black_24dp"
+            android:title="Web View" />
+        <item
+            android:id="@+id/nav_dialog"
+            android:icon="@drawable/ic_dialog_24dp"
+            android:title="Dialog" />
+
+        <item
+            android:id="@+id/nav_code"
+            android:icon="?android:attr/actionModeSelectAllDrawable"
+            android:title="QR Code" />
+
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_exit_to_app_black_24dp"
+                android:title="Sign Out" />
+
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "557531619147",
+    "firebase_url": "https://ekreasi-9592a.firebaseio.com",
+    "project_id": "ekreasi-9592a",
+    "storage_bucket": "ekreasi-9592a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:557531619147:android:6198aebd38e889a7",
+        "android_client_info": {
+          "package_name": "com.example.ekreasi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "557531619147-sifqb9cgd0vdtme8b98ug22vb04pos9b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbIw8aPHuRHikuPpI6fR_OKGwonkcj6Mk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
